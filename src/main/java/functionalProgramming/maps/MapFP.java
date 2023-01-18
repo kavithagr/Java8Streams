@@ -1,4 +1,4 @@
-package functionalProgramming;
+package functionalProgramming.maps;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -17,8 +17,7 @@ public class MapFP {
 
         map.entrySet().stream().forEach(e-> System.out.println(e.getKey()+":"+e.getValue()));
 
-
-        //trying to extract any value that is non existing
+           //trying to extract any value that is non existing
         Optional<Integer> stringOptional = map.entrySet().stream().filter(e -> "Non Existent Title".equals(e.getValue())).map(Map.Entry::getKey).findFirst();
         System.out.println("stringOptional =" + stringOptional);
 
